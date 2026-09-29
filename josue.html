@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños, Mi Amor! ❤️</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            text-align: center;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            max-width: 420px;
+            width: 90%;
+            z-index: 10;
+        }
+        h1 {
+            color: #c41a52;
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #ff4d6d;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        .photo-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .photo-container img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        .photo-container:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        .photo-container::after {
+            content: "¡Toca la foto! ❤️";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff4d6d;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        .photo-container:hover::after {
+            opacity: 1;
+        }
+        p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+        #mensaje-sorpresa {
+            display: none;
+            margin-top: 15px;
+            background-color: #ffe6ea;
+            padding: 15px;
+            border-radius: 15px;
+            border-left: 5px solid #ff4d6d;
+            color: #a4133c;
+            font-weight: bold;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>¡Feliz Cumpleaños! 🎉</h1>
+        <h2>Para el hombre más precioso del mundo</h2>
+        
+        <!-- Imagen anclada: asegúrate de que tu foto esté en la misma carpeta y se llame foto_cumple.jpg -->
+        <div class="photo-container" onclick="mostrarMensaje()">
+            <img src="foto_cumple.jpg" alt="Nuestra foto">
+        </div>
+
+        <p>Hoy es un día muy especial y no quería dejar pasar la oportunidad de recordarle lo mucho que significa para mí. ¡Espero que pase un día increíble!</p>
+        
+        <div id="mensaje-sorpresa">
+            ¡Te amo muchísimo, mi amor! 💖 Gracias por hacer cada día más bonito. Que cumpla muchos años más y que siempre los celebremos juntitos aunque no fisicamente, pero para mi también es un día muy especial.
+        </div>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            var mensaje = document.getElementById("mensaje-sorpresa");
+            if (mensaje.style.display === "block") {
+                mensaje.style.display = "none";
+            } else {
+                mensaje.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
